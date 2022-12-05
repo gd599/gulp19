@@ -1,0 +1,102 @@
+@import "variables";
+@import "mixins"; 
+@import "mobile";
+@import "desktop";
+
+nav li {
+    margin: 0 1rem 1rem 1rem;
+    font-size: 1.3rem;
+  }
+
+body {
+    background-color: #082B59;
+    @include nospace;
+    font-family: $lato;
+    line-height: 2;
+  }
+  h1, h2, h3 {
+    font-family: $poppins;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  /* make images flexible */
+  img {
+    max-width: 100%;
+  }
+  a {
+    color: $gulpBrown;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  header {
+    border-bottom: 10px solid $gulpBrown;
+  }
+ 
+  nav a:hover {
+    color: $gulpBrown;
+  }
+  /* establishes a white background */
+  .main-bkgd {
+    background: complement(#ffffff) url(https://assets.codepen.io/6306176/gulp-bean-bkgd.jpg) repeat-x bottom;
+    padding-bottom: 300px;
+  }
+  /* sits inside of the white background, centered */
+  .main {
+    max-width: 1200px;
+    @include boxmodel(0 auto, 2rem);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  article {
+    flex-basis: 73%;
+  }
+  figure {
+    margin: 3rem 0 0 0;
+    flex-basis: 25%;
+    background-color: $gulpBrown;
+    border-radius: 10px;
+  }
+  figure img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  figcaption {
+    color: $gulpWhite;
+    padding: 0.5rem;
+  }
+  .button {
+    display: inline-block;
+    background-color: $gulpBrown;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    color: $gulpWhite;
+    text-decoration: none;
+    border: 3px solid $gulpBrown;
+  }
+  .button:hover {
+    background-color: $gulpWhite;
+    color: $gulpBrown;
+  }
+  footer {
+    color: $gulpWhite;
+    text-align: center;
+    border-top: 10px solid $gulpBrown;
+  }
+  footer ul {
+    list-style-type: none;
+    @include nospace;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  footer a {
+    color: $gulpWhite;
+    font-size: 2rem;
+    display: block;
+    margin: 0 1rem 3rem 1rem;
+  }
